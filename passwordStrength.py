@@ -7,14 +7,14 @@ st.set_page_config(page_title="Password Strength Checker By Kishor Kumar", page_
 st.markdown("""
 <style>
     .main {text-align: center;}
-    .stTextInput {width: 60% !important; margin: auto;}
-    .stButton button {width: 50%; background-color #45a049;}
-    .stButton button:hover { background-color: #45a049;}         
+    .stTextInput {width: 60% !important; margin: auto; }
+    .stButton button {width: 50%; background-colorrgb(0, 91, 165); }
+    .stButton button:hover { background-color:rgb(4, 118, 194);}         
 </style>
 """, unsafe_allow_html=True)
 
 # page title and description
-st.title("Password Strength Checker")
+st.title("🗝️ Password Strength Checker")
 st.write("Check the strength of your password by entering it below.")
 
 # function to check password strength
@@ -33,7 +33,7 @@ def check_password_strength(password):
         feedback.append("❌Password must contain both uppercase and lowercase letters.")
 
 
-    if re.search(r"/d", password):
+    if re.search(r"\d", password):
         score += 1
     else:
         feedback.append("❌Password must contain at least one number.") 
